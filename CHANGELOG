@@ -1,0 +1,71 @@
+v0.8.1 Fixed permissions?
+
+v0.8.0 Update to thrift 0.8.0
+
+v0.7.1 Added support for :before_method and :on_exception callback types.
+Added support for registering multiple callbacks of a given type.
+
+v0.7.0 Updated thrift gem dependency to 0.7.0
+
+v0.6.3 Document the :connect_timeout option.
+Add support for specifying client-side timeouts when using FramedTransport
+set transport timeout after connection is established
+Add a method `add_callback` allowing a client to register a block that is invoked at a certain event.
+Fixup socket timeouts.
+
+
+
+v0.6.2 Remove lingering thrift v0.5.0 reference.
+
+v0.6.1 Add connect timeout. Bump thrift dependency to ~> v0.6.0.
+
+v0.6.0 Fix bug where we'd try to mark the current server down when we didn't have a current server.
+Upgrade to thrift 0.5.
+
+v0.5.0 Add support for wrapping exceptions, so that Thrift::Foo can become Greeter::Foo.
+Make server_retry_period work the way you expect.
+Better bookkeeping around marking servers as dead.
+
+v0.4.7 fix thrift gem dependency
+
+v0.4.6 Add support for oneway methods.
+
+v0.4.5. Fix broken retries.
+
+v0.4.4. Default to 0 retries rather than the number of servers.
+
+v0.4.3. Bug fixes: handle_exception could be called more than once. Integer types are read signed.
+
+v0.4.2. Allow per-method overrides of retries. Fix several bugs with EventMachine.
+
+v0.4.1. Making ThriftClient decoratable. Able to add new functionality a class definition.
+
+v0.4.0. Add new EventMachine transport.  This requires two layers of transport
+configurability:
+  options[:transport] for EventMachine or Socket transports
+  options[:transport_wrapper] for optional Buffered or Framed Transport.
+Clients will need to update their options to ensure they don't conflict with this change. (mperham)
+Revert global timeouts. (ryanking)
+Add support for HTTPClientTransport (Chris Sepic)
+
+v0.3.3. Allow for a timeout over all requests in a call.
+
+v0.3.2. Fix connection close bug (nkallen, mattknox).
+
+v0.3.1. Add ability to reset connection after N requests.
+
+v0.3. Change default timeout semantics; hash default was too sneaky. Fix bug.
+
+v0.2.2. Fix connect bug.
+
+v0.2.1. Don't turn off strict_read by default; allow override.
+
+v0.2. Add ThriftClient::Simple (Robey).
+
+v0.1.3. Define methods explicitly.
+
+v0.1.2. Support default responses.
+
+v0.1.1. Support server_retry_period.
+
+v0.1. First release.
